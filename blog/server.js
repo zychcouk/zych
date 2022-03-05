@@ -1,7 +1,7 @@
 // body parser
 const express = require('express');
 const app = express();
-const port = 3001
+const port = process.env.PORT || 3000;
 fs = require('fs');
 // if you have a public dir with static scripts and styles
 app.use(express.static('public'));
