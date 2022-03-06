@@ -1,14 +1,12 @@
 ---
 title: "Genealogy 101"
 description: "Starting a genealogy tree is not an easy task. If You're anything like me you may feel intimidated and not sure where to start."
+created: "April 15, 2021"
 ---
 
 
-Created: April 15, 2021
 
 # Intro
-
-
 
 Starting a genealogy tree is not an easy task. If You're anything like me you may feel intimidated and not sure where to start. If you would tell me a year ago that my tree will have 800 entries in a space of 12 months I would have not believed you for a second. But as hard as it may seem at the start, it only gets easier once you have some basic information. 
 
@@ -38,8 +36,8 @@ I will speak from my own experience and I did most of the research on Polish web
 
 Surprisingly the most difficult part of finding your roots is to break through the barrier of the first 100 years. There is an abundance of records and information dating from before 1920. After this it's fairly easy if you know the place and a type of document you are looking for.
 
-> The truth is that everybody just loves taking about themselves. I not had one Grandma or Aunt that would not take the opportunity to tell her life story with great detail.
-> 
+The truth is that everybody just loves taking about themselves. I not had one Grandma or Aunt that would not take the opportunity to tell her life story with great detail.
+
 
 First step would be then phoning all of the relatives you can phone oldest ones first.This may seem a bit odd and uneasy depending how close you are with them and how comfortable the idea seem and how extravert you are, but just wait until you ask. 
 
@@ -52,8 +50,6 @@ The truth is that everybody just loves taking about themselves. I not had one Gr
 Even if they can't remember the exact date of birth or death of your relatives the burial place will be crucial here as you can extract these from there.
 
 ## Graves can help you pass the first 100 years
-
-
 
 At the start I have extracted a lot of dates from online photos from cementaries. If you know the name of the person and the place of their  burial you can pretty much be sure that the dates are right as long as there are no two people with the same name there. The advantage here is that you can get exact date of birth which can be useful to find the birth certificate if you know the birth place but not sure of the date.
 

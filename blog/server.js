@@ -33,15 +33,17 @@ app.get("/:article", (req, res) => {
     post: result,
     title: file.data.title,
     description: file.data.description,
-    image: file.data.image
+    image: file.data.image,
+    created: file.data.created
   });
 });
 
 
   app.get("/", (req, res) => {
     const posts = fs.readdirSync(__dirname + '/articles').filter(file => file.endsWith('.md'));
+
     res.render("blog", {
-      posts: posts
+      posts: posts,
     });
   });
 

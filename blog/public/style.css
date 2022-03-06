@@ -1,0 +1,15 @@
+body {font-family: monospace;}
+a { color: #e71404;;}
+.footer{padding-top:20px}
+.center{text-align: center;}
+.links a {text-decoration: none;
+  color: #e71404;;
+  font-style: italic;
+  text-transform: uppercase;
+}
+#blog{
+  max-width: 400px;
+  padding:10px;
+  margin:auto;
+  
+}
