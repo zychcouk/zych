@@ -20,10 +20,15 @@ app.set("view engine", "ejs");
 const matter = require('gray-matter');
 
 app.get("/:article", (req, res) => {
-
+let file
   // read the markdown file
-  const file = matter.read(__dirname + '/articles/' + req.params.article + '.md');
+  try{
+  file = matter.read(__dirname + '/articles/' + req.params.article + '.md');}
 
+  catch (e){
+   res.redirect('/');
+  }
+  
   // use markdown-it to convert content to HTML
   var md = require("markdown-it")();
   let content = file.content;
@@ -46,6 +51,8 @@ app.get("/:article", (req, res) => {
       posts: posts,
     });
   });
+
+
 
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
