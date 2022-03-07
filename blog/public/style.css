@@ -1,4 +1,6 @@
-body {font-family: monospace;}
+body {font-family: monospace; max-width: 400px;
+  padding:10px;
+  margin:auto;}
 a { color: #e71404;;}
 .footer{padding-top:20px}
 .center{text-align: center;}
@@ -7,9 +9,4 @@ a { color: #e71404;;}
   font-style: italic;
   text-transform: uppercase;
 }
-#blog{
-  max-width: 400px;
-  padding:10px;
-  margin:auto;
-  
-}
+

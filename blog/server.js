@@ -19,8 +19,15 @@ app.set("view engine", "ejs");
 // gray-matter to read the .md files better
 const matter = require('gray-matter');
 
+
 app.get("/:article", (req, res) => {
-let file
+  let file
+
+  if(req.params.article == 'projects')
+  {
+    res.render("projects", {})
+    return
+  }
   // read the markdown file
   try{
   file = matter.read(__dirname + '/articles/' + req.params.article + '.md');}
