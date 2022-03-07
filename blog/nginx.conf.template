@@ -1,0 +1,26 @@
+server {
+  listen      [::]:80;
+  listen      80;
+  server_name $NOSSL_SERVER_NAME;
+  access_log  /var/log/nginx/${APP}-access.log;
+  error_log   /var/log/nginx/${APP}-error.log;
+
+  # set a custom header for requests
+  add_header X-Served-By www-ec2-01;
+
+  location    / {
+    proxy_pass  http://$APP;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade \$http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host \$http_host;
+    proxy_set_header X-Forwarded-Proto \$scheme;
+    proxy_set_header X-Forwarded-For \$remote_addr;
+    proxy_set_header X-Forwarded-Port \$server_port;
+    proxy_set_header X-Request-Start \$msec;
+    rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
+    rewrite ^/(.*)/$ /$1 permanent;
+    try_files $uri/index.html $uri.html $uri/ $uri =404;
+  }
+  include $DOKKU_ROOT/$APP/nginx.conf.d/*.conf;
+}
