@@ -1,7 +1,7 @@
 body {font-family: monospace; max-width: 400px;
   padding:10px;
   margin:auto;}
-a { color: #e71404;;}
+a { color: #e71404;}
 .footer{padding-top:20px}
 .center{text-align: center;}
 .links a {text-decoration: none;
@@ -10,3 +10,5 @@ a { color: #e71404;;}
   text-transform: uppercase;
 }
 
+blockquote{border-left: 3px #e71404 solid;
+  padding: 8px;}
