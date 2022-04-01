@@ -10,23 +10,35 @@ events {
 http {
   types_hash_max_size 2048;
   include mime.types;
-  charset UTF-8;
+  charset UTF - 8;
   server {
-    listen {{ $.PORT }};
+    listen { { $.PORT } };
     server_name  _;
-    {{ if ne $.NGINX_ROOT "" }}
-      root /app/www/{{ $.NGINX_ROOT }};
-    {{ else }}
-      root /app/www;
-    {{ end }}
+    { { if ne $.NGINX_ROOT "" } }
+    root / app / www / {{ $.NGINX_ROOT }
+  };
+  { { else } }
+  root / app / www;
+  { { end } }
     index index.html;
     port_in_redirect off;
 
-    location / {
-      if ($request_uri ~ ^/(.*)\.html) {
-        return 302 /$1;
+  location / {
+    if($request_uri ~ ^ /(.*)\.html) {
+  return 302 / $1;
+}
+    try_files $uri $uri.html $uri / =404;
     }
-    try_files $uri $uri.html $uri/ =404;
-    }
+    location /syncthing/ {
+  proxy_set_header        Host $host;
+  proxy_set_header        X-Real-IP $remote_addr;
+  proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header        X-Forwarded-Proto $scheme;
+
+  proxy_pass              http://localhost:8384/;
+
+  proxy_read_timeout      600s;
+  proxy_send_timeout      600s;
+}
   }
 }
