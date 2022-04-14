@@ -1,0 +1,18 @@
+I"!<div id="projects">
+
+    <div class="project-block">
+        <h1>Projects</h1>
+        <h2>Washycle</h2>
+        <i>Tech Stack:VUE VUETIFY, NUXT, STRIPE, NODEJS, NPM, POSTGRES, VPS, NGINX, DOCKER ,
+            DOKKU.</i>
+        <p>
+        <a href="https://washcycle.co.uk">Washcycle</a></p>
+        <p><b>Washcycle</b> is a great project that I have taken over. Awesome pro
+        entirely custom made with its own database schema, API, Stripe integration and admin area.</p>
+        <p>The App allows washcycle clients to make orders and the drivers to work using the website custom admin area. 
+        The order progress, payments, order details and status all can be worked with inside the custom admin area. 
+        Made using <b>Vue</b> on the front &amp; <b>Node</b></p>
+    </div>
+
+</div>
+:ET

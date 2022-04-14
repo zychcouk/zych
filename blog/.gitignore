@@ -1,1 +1,3 @@
 **/node_modules
+**/blog/.jekyll-cache
+**/blog/.jekyll--Converters--Markdown
