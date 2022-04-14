@@ -1,0 +1,17 @@
+#!/bin/bash
+REMOTE_URL="dokku@51.75.171.179"
+APP=$1
+
+if [ $# -eq 1 ]
+  then
+	  git push $REMOTE_URL:$APP `git subtree split --prefix $APP`:refs/heads/master --force
+else
+	echo "Usage: deploy <dir>"
+	echo "Example: deploy api"
+	echo ""
+	echo "The <dir> is the name of the directory (and therefore the the app that"
+	echo "you wish to deploy. You have supplied either too few or too many arguments"
+	echo "for that to work."
+	echo ""
+fi
+ 
